@@ -1,0 +1,12 @@
+{
+  "ten_framework_path": "/home/asadr/works/repos/vera-ten/stroke_bot/../ten-framework",
+  "extensions": {
+    "ollama_medical": "/home/asadr/works/repos/vera-ten/stroke_bot/extensions/custom/ollama_medical_python",
+    "conversation_flow": "/home/asadr/works/repos/vera-ten/stroke_bot/extensions/custom/conversation_flow_python",
+    "recording": "/home/asadr/works/repos/vera-ten/stroke_bot/extensions/custom/recording_python"
+  },
+  "runtime": {
+    "go_runtime": "/home/asadr/works/repos/vera-ten/stroke_bot/../ten-framework/ai_agents/agents/bin/ten_runtime_go",
+    "log_level": "info"
+  }
+}

@@ -1,0 +1,38 @@
+# Core dependencies
+ollama>=0.1.7
+pyyaml>=6.0
+pyaudio>=0.2.11
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Audio processing
+librosa>=0.10.0
+soundfile>=0.12.0
+webrtcvad>=2.0.10
+
+# Speech recognition and synthesis
+speechrecognition>=3.10.0
+pyttsx3>=2.90
+gTTS>=2.3.0
+
+# Web framework for API
+fastapi>=0.100.0
+uvicorn>=0.23.0
+websockets>=11.0.0
+
+# Data processing
+pandas>=2.0.0
+openpyxl>=3.1.0
+
+# Logging and monitoring
+loguru>=0.7.0
+rich>=13.0.0
+
+# Development tools
+pytest>=7.4.0
+black>=23.0.0
+flake8>=6.0.0
+
+# Optional: For advanced audio processing
+# whisper>=1.1.0  # Uncomment if you want to use Whisper for ASR
+# torch>=2.0.0    # Uncomment if you want to use PyTorch models

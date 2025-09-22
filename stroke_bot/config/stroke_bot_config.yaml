@@ -1,0 +1,46 @@
+# Stroke Conversation Bot Configuration
+
+# Bot Settings
+bot:
+  name: "AI Stroke Navigator"
+  organization: "PennState Health"
+  site: "Hershey Medical Center"
+  version: "1.0"
+
+# Conversation Settings
+conversation:
+  max_duration_minutes: 30
+  timeout_seconds: 10
+  retry_attempts: 3
+  emergency_keywords: ["emergency", "911", "urgent", "help"]
+
+# Audio Settings
+audio:
+  sample_rate: 16000
+  channels: 1
+  chunk_size: 1024
+  format: "pcm_16000"
+  recording_path: "data/recordings"
+  transcription_path: "data/transcriptions"
+
+# LLM Settings
+llm:
+  provider: "ollama"
+  model: "llama3.2:3b"
+  temperature: 0.7
+  max_tokens: 512
+  context_length: 4096
+
+# Data Storage
+storage:
+  database_path: "data/conversations.db"
+  export_formats: ["json", "csv", "xlsx"]
+  backup_enabled: true
+  backup_interval_hours: 24
+
+# Logging
+logging:
+  level: "INFO"
+  file_path: "logs/stroke_bot.log"
+  max_file_size_mb: 10
+  backup_count: 5

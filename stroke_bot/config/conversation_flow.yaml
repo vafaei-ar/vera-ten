@@ -1,0 +1,66 @@
+# Conversation Flow Configuration
+
+# Flow States
+states:
+  - greeting
+  - consent
+  - knowledge_check
+  - general_wellbeing
+  - medications
+  - followup_care
+  - lifestyle
+  - daily_activities
+  - resources
+  - wrapup
+
+# Transitions
+transitions:
+  greeting:
+    next: consent
+    conditions: []
+  
+  consent:
+    next: knowledge_check
+    conditions:
+      - type: "confirmed"
+        action: "proceed"
+      - type: "denied"
+        action: "emergency_exit"
+  
+  knowledge_check:
+    next: general_wellbeing
+    conditions: []
+  
+  general_wellbeing:
+    next: medications
+    conditions: []
+  
+  medications:
+    next: followup_care
+    conditions: []
+  
+  followup_care:
+    next: lifestyle
+    conditions: []
+  
+  lifestyle:
+    next: daily_activities
+    conditions: []
+  
+  daily_activities:
+    next: resources
+    conditions: []
+  
+  resources:
+    next: wrapup
+    conditions: []
+  
+  wrapup:
+    next: "end"
+    conditions: []
+
+# Emergency handling
+emergency:
+  keywords: ["emergency", "911", "urgent", "help", "pain", "chest pain"]
+  action: "immediate_exit"
+  message: "If you are experiencing a medical emergency, please hang up and call 911 immediately."
